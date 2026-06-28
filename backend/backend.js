@@ -72,6 +72,17 @@ app.get('/api/results', async (req, res) => {
     }
 });
 
+
+// Health check route
+app.get('/', (req, res) => {
+  res.json({ message: 'Backend Live Undi Bro! 🔥' });
+});
+
+// Tasks API route
+app.get('/api/tasks', (req, res) => {
+  res.json([]); // Temporary ga empty array
+});
+
 // Start Server
 app.listen(PORT, () => {
     console.log(`Server running smoothly on port ${PORT}`);
